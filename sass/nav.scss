@@ -1,0 +1,40 @@
+@use "variables";
+@use "mixins";
+
+nav {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  background-color: variables.$background-color;
+  color: variables.$white;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 0.8em;
+  @include mixins.space-between;
+  align-items: flex-end;
+
+  button {
+    background-color: variables.$background-color;
+    border: none;
+    color: variables.$white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    text-shadow: 2px 2px 4px black;
+  }
+
+  > span {
+    font-family: variables.$tweet-font;
+    font-size: 42px;
+   }
+
+   i {
+    color: variables.$red;
+    font-size: 20px;
+   }
+  }
+
+ .bold {
+  font-weight: bold;
+ }

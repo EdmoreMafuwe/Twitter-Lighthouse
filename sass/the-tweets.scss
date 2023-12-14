@@ -1,0 +1,67 @@
+@use "variables";
+@use "mixins";
+
+#the-tweets {
+  article {
+    border: 4px solid variables.$border-color;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  article:hover {
+    box-shadow: 8px 8px variables.$shadow-color; 
+  }
+
+  header {
+    @include mixins.space-between;
+    align-items: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    div {
+      &:first-child {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  span.name {
+    margin-left: 0.3em;
+  }
+
+  div.right-div {
+    color: variables.$shadow-color;
+    font-weight: 600;
+  }
+
+  p {
+    padding: 0.5em;
+    font-weight: 600;
+    word-break: break-all;
+  }
+
+  footer {
+    border-top: 4px solid variables.$border-color;
+    padding-top: 0.5em;
+    padding-left: 0.8em;
+    padding-right: 0.8em;
+    @include mixins.space-between;
+    font-size: 15px;
+  }
+}
+
+div.icon {
+  i {
+    color: variables.$nav-color;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+  }
+
+  i:hover {
+    color: variables.$header-color;
+  }
+}
